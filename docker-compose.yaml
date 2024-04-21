@@ -3,7 +3,7 @@ services:
     container_name: geoapi_app
     image: sorxill/geoapi:test_base
     env_file:
-      - .env
+      - .env-docker
     volumes:
       - ./src:/app/src
     ports:
