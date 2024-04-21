@@ -1,6 +1,4 @@
-"""
-Create async session connect to database
-"""
+"""Create async session connect to database."""
 
 from typing import AsyncGenerator
 
@@ -30,6 +28,6 @@ async_session = async_sessionmaker(
 
 
 async def get_db() -> AsyncGenerator:
-    """Dependency for getting async session"""
+    """Dependency for getting async session."""
     async with async_session() as session:
         yield session

@@ -3,10 +3,14 @@
 import uvicorn
 from fastapi import FastAPI
 
+from src.api.handlers.geo_handler import geo_router
+
 geoapp = FastAPI(
     title="GeoAPI",
     description="Test API for test task",
 )
+
+geoapp.include_router(geo_router)
 
 
 @geoapp.get("/", description="Ping APP", name="Get rout For Ping")
