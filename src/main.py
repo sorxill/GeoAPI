@@ -1,10 +1,7 @@
-"""
-Main endpoint
-"""
+"""Main endpoint."""
 
 import uvicorn
 from fastapi import FastAPI
-
 
 geoapp = FastAPI(
     title="GeoAPI",
@@ -13,10 +10,8 @@ geoapp = FastAPI(
 
 
 @geoapp.get("/", description="Ping APP", name="Get rout For Ping")
-def start_answer():
-    """
-    Check the tests and e.t.c
-    """
+def start_answer() -> dict:
+    """Check the tests and e.t.c."""
     return {
         "answer": "Success",
     }
